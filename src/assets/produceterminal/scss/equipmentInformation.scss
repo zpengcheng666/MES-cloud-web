@@ -1,0 +1,141 @@
+//根节点
+.root {
+  height: 100%;
+  padding: 1vh 2vw;
+
+  //左侧
+  .left {
+    padding: 0px !important;
+
+    //左侧内容
+    .left-body {
+      height: 100%;
+      margin-right: 0.5vw;
+
+      //设备信息
+      .device {
+        background-image: url(../images/deviceInfoBackground.png);
+        background-size: 100% 100%;
+        margin-bottom: 0.7vh;
+        padding: 2.7vh 0px 0px 0px;
+
+        //间距
+        .space {
+          width: 100%;
+
+          table {
+            width: 30vw;
+            margin-top: 2vh;
+
+            tr,
+            td {
+              height: 2vh;
+              padding: 0px;
+            }
+
+            .title {
+              color: rgba(97, 250, 249, 255);
+              font-size: 2.3vh;
+            }
+
+            .details {
+              color: rgba(157, 165, 173, 1);
+              font-size: 2vh;
+            }
+          }
+        }
+      }
+
+      //报警信息
+      .warning {
+        background-image: url(../images/warningInfoBackground.png);
+        background-size: 100% 100%;
+        margin-top: 0.7vh;
+        padding: 2.7vh 0px 0px 0px;
+
+        //间距
+        .space {
+          width: 100%;
+
+          .warningTable {
+            background-color: transparent;
+            border-bottom: 0.3vh solid rgba(37, 249, 254, 1);
+            --el-table-header-text-color: white;
+            --el-table-text-color: rgba(166, 173, 180, 1);
+            --el-table-border-color: rgba(37, 249, 254, 1);
+          }
+
+          .warningTable :deep(*) {
+            background-color: transparent;
+          }
+
+          .warningTable :deep(.el-table__header) {
+            font-size: 2.4vh;
+            background-color: rgba(13, 48, 81, 1);
+          }
+
+          .warningTable :deep(.el-table__row) {
+            font-size: 2vh;
+          }
+        }
+      }
+    }
+  }
+
+  //右侧
+  .individually {
+    background-image: url(../images/individuallyInfoBackground.png);
+    background-size: 100% 100%;
+    padding-top: 3vh;
+
+    //间距
+    .space {
+      width: 100%;
+
+      .individuallyTable {
+        background-color: transparent;
+        --el-table-header-text-color: white;
+        --el-table-text-color: rgba(166, 173, 180, 1);
+        --el-table-border-color: rgba(37, 249, 254, 1);
+      }
+
+      .individuallyTable :deep(*) {
+        background-color: transparent;
+      }
+
+      .individuallyTable :deep(.el-table__header) {
+        font-size: 2.4vh;
+        background-color: rgba(13, 48, 81, 1);
+      }
+
+      .individuallyTable :deep(.el-table__row) {
+        font-size: 2vh;
+      }
+
+      .individuallyTable :deep(.el-table_2_column_4) {
+        background-color: rgba(13, 49, 82, 1);
+      }
+    }
+
+    .button{
+      margin-top: 3vh;
+      width: 100%;
+      height: 3vh;
+
+      .image{
+        height: 100%;
+        margin-left: 40vw;
+      }
+
+      .click:hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.title-fount {
+  color: rgba(97, 250, 249, 255);
+  font-size: 2.5vh;
+}

@@ -1,0 +1,353 @@
+#cutter-distribution-terminal {
+    height:100vh;
+    // background-image: url("../cutterpickerimages/cs.png");
+    // background-image: url("../cutterpickerimages/cutterBG.png");
+    background-color: #081636;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+ 
+
+    .left-container{
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        height:90vh;
+        padding-left: 1vw;
+        // margin-left: 1.2vw;
+        // // background-image: url("../cutterpickerimages/leftBorder.png");
+        // background-size: 100% 100%;
+        // background-position: center;
+        // background-repeat: no-repeat;
+
+        .left-header{
+            margin-top: 1vh;
+            text-align: center;
+            color:#66DAF8;
+            height:  13vh;
+            .left-header-item {
+                padding-top: 2vh;
+                height:  10vh;
+                background-image: url("../cutterpickerimages/statisticBorder.png");
+                background-size: 100% 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+
+                .left-header-item-value{
+                    height: 5vh;
+                    font-size: 3.2vh;
+                    font-weight: bold;
+
+                    .left-header-item-unit{
+                        font-size: 2vh;
+                        font-weight: bold;
+                    }
+                }
+
+                .left-header-item-title {
+                    color: #fdf9f9;
+                    height: 2.8vh;
+                    width: 60%;
+                    font-size: 2vh;
+                    font-weight: bold;
+                    margin: 1vh auto;
+                    background-color: #06ABFD;
+                }
+            }
+            
+        }
+
+
+
+        .left-top{
+            height:  3vh;
+            background-image: url("../cutterpickerimages/leftTopTitle.png");
+            background-size: 20% 100%;
+            background-position: left;
+            background-repeat: no-repeat;
+
+            padding:0.4% 0 0 3%;
+            font-size: 1.8vh;
+            color:#66DAF8;
+        }
+
+        .left-center{
+            margin-top: 1vh;
+            height: 35vh;
+            border: 0.2vh solid;
+            border-image: linear-gradient(90deg,#66DAF8,#19819b) 1;
+
+          
+        }
+        .left-bottom{
+            margin-top: 1vh;
+            height: 35vh;
+            border: 0.2vh solid;
+            border-image: linear-gradient(90deg,#66DAF8,#19819b) 1;
+        }
+
+
+    }
+
+
+    .right-container{
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        padding-right: 1vw;
+
+        .right-top{
+            margin-top: 1vh;
+            height: 99%;
+            border: 0.2vh solid;
+            border-image: linear-gradient(90deg,#19819b,#04576e) 1;
+
+            .right-top-title{
+                font-size: 1.8vh;
+                color:#66DAF8;
+                text-align: center;
+                margin-top: 0.5vh;
+                padding-top: 0.5vh;
+                height: 3vh;
+                background-image: url("../cutterpickerimages/titleBG.png");
+                background-size: 20% 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+              
+            }
+
+            .right-top-box{
+                height: 7vh;
+                background-image: url("../cutterpickerimages/cutterLogo.png");
+                background-size: 70% 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .right-top-title1{
+                line-height: 3vh;
+                width: 90%;
+                height: 3vh;
+                border-bottom: 0.1vh solid #84979c;
+            }
+            .right-top-title2{
+                line-height: 3.8vh;
+                width: 90%;
+                height: 3.5vh;
+                border-bottom: 0.1vh solid #84979c;
+            }
+
+            .right-top-cutter-body{
+                margin: 1.2vh 0 0 2vw;
+                height: 2vh;
+            }
+
+            .right-top-label{
+                font-size: 1.6vh;
+                color: #66DAF8;
+            }
+
+            .right-top-val{
+                font-size: 1.6vh;
+                text-align: right;
+                color: whitesmoke;
+            }
+        }
+
+        .right-center{
+            margin-top: 2vh;
+            padding-left: 0.5vw;
+            height: 68vh;
+            background-image: url("../cutterpickerimages/cutterPickBG.png");
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+
+
+            .right-center-header{
+                text-align: center;
+                font-size: 1.8vh;
+                color: #66DAF8;  
+            }
+
+            .right-center-box{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding-left: 0.5vw;
+                width: 98%;
+                height: 52vh;
+
+                .right-center-box-item-select{
+                    width: 22.5vw;
+                    height: 23vh;
+                    background-image: url("../cutterpickerimages/cutterBorderSelectBG.png");
+                    background-size: 100% 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    padding: 2vh 0 0 0.7vw;
+                }
+
+                .right-center-box-item{
+                    width: 22.5vw;
+                    height: 23vh;
+                    background-image: url("../cutterpickerimages/cutterBorderBG.png");
+                    background-size: 100% 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    padding: 2vh 0 0 0.7vw;
+                }
+                .right-center-box-item-border{
+                    width: 97%;
+                    height: 95%;
+                    display: grid;
+                    grid-template-columns: repeat(8, 1fr); /* 创建8列，每列宽度相等 */
+                    grid-template-rows: repeat(4, 1fr); /* 创建4行，每行高度相等 */
+                    gap: 0.5vw; /* 设置网格项之间的间距 */
+                }
+                
+                .storage-null{
+                    width: 2.2vw;
+                    height: 2.2vw;
+                    background-image: url("../cutterpickerimages/storageNull.png");
+                    background-size: 100% 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    cursor: pointer;
+                }
+
+                .cutter-exist{
+                    width: 2.2vw;
+                    height: 2.2vw;
+                    background-image: url("../cutterpickerimages/cutterExist.png");
+                    background-size: 100% 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    cursor: pointer;
+                }
+
+                .cutter-select{
+                    width: 2.2vw;
+                    height: 2.2vw;
+                    background-image: url("../cutterpickerimages/cutterSelect.png");
+                    background-size: 100% 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    cursor: pointer;
+                }
+                .storage-select-null{
+                    width: 2.2vw;
+                    height: 2.2vw;
+                    background-image: url("../cutterpickerimages/storageSelectNull.png");
+                    background-size: 100% 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    cursor: pointer;
+                }
+            }
+
+   
+            .cutter-exist{
+                background-image: url("../cutterpickerimages/cutterExist.png");
+                background-size: 100% 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .cutter-select{
+                background-image: url("../cutterpickerimages/cutterSelect.png");
+                background-size: 100% 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+
+
+        .right-footer{
+            width: 100%;
+            height: 10vh;
+
+            .check-in{
+                margin: 0 auto;
+                width: 70%;
+                height: 5vh;
+                cursor: pointer;
+                background-image: url("../cutterpickerimages/checkIn.png");
+                background-size: 100% 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            
+            .check-out{
+                margin: 0 auto;
+                width: 70%;
+                height: 5vh;
+                cursor: pointer;
+                background-image: url("../cutterpickerimages/checkOut.png");
+                background-size: 100% 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            
+            .call-out{
+                margin: 0 auto;
+                width: 70%;
+                height: 5vh;
+                cursor: pointer;
+                background-image: url("../cutterpickerimages/callOut.png");
+                background-size: 100% 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            
+            .distribution{
+                margin: 0 auto;
+                width: 70%;
+                height: 5vh;
+                cursor: pointer;
+                background-image: url("../cutterpickerimages/distribution.png");
+                background-size: 100% 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+
+            .right-footer-text{
+                padding: 1.2vh 0.5vw 0 0.7vw;
+                margin: 0.5vw 0 0 0.5vw;
+                width: 94.5%;
+                height: 3.3vh;
+                background-image: url("../cutterpickerimages/rightAlert.png");
+                background-size: 100% 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+
+                .right-footer-text-border{
+                    font-size: 1.5vh;
+                    color: #e7ebee;
+                    width: 100%;
+                    height: 2.5vh;
+                    display: flex;
+                    justify-content: left;
+                    flex-wrap: nowrap;
+
+                    line-height: 2.5vh;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+            }
+        }
+
+    }
+
+    
+
+
+
+
+}

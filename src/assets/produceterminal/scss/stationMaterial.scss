@@ -1,0 +1,45 @@
+.material-container {
+  height: 100%;
+  padding: 4vh 5vw;
+  //background-image: url(../images/background1.png);
+  background-size: 100% 100%;
+  margin-right: 1vw;
+  width: 98%;
+  position: relative;
+  .material-header {
+    width: 100%;
+    .scanText {
+      top: 2%;
+      font-size: 1.2vw;
+      color: #76f0ee;
+      position: absolute;
+    }
+  }
+
+  .material-table {
+    //border-top: 0.3vh solid rgba(37,249,254,1);
+    background-color: transparent;
+    font-size: large;
+    --el-table-text-color: white;
+    --el-table-header-text-color: white;
+    --el-table-border-color: rgba(37, 249, 254, 1);
+    // --el-table-row-hover-bg-color: rgb(118, 240, 238, 0.4);
+    --el-table-current-row-bg-color: rgb(118, 240, 238, 0.4);
+    --el-table-row-hover-bg-color: transparent;
+
+    .img {
+      height: 3vh;
+      margin: 0vh 0.3vw;
+      opacity: 0.7;
+    }
+
+    .img:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+
+  .material-table :deep(*) {
+    background-color: transparent;
+  }
+}

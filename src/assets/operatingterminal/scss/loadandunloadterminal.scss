@@ -1,0 +1,470 @@
+#myContainner {
+  height: 100vh;
+  background-image: url('../images/loadAndUnloadBG.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  //id扫码
+  .sacnCode {
+    height: 6vh;
+    left: 88%;
+    top: 27%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    .scanID {
+      width: 3vw;
+      //transform: scale(0.25);
+      //transform-origin:0% 0%;
+      position: absolute;
+    }
+    .scanID:hover {
+      box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
+      opacity: 0.8;
+      cursor: pointer;
+    }
+    .scanText {
+      left: 3.6%;
+      top: 15%;
+      font-size: 1.5vw;
+      color: #76f0ee;
+      position: absolute;
+    }
+  }
+
+  .top-main {
+    .top-main-container {
+      height: 35vh;
+      //已就位
+      .material-in-position {
+        width: 67vw;
+        height: 43vh;
+        background-image: url('../images/loadInPosition.png');
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        .material-in-position-text {
+          height: 8vh;
+          position: relative;
+          font-size: 1.4vw;
+          color: #76f0ee;
+          top: 7%;
+          left: 45%;
+        }
+        .material-in-position-table {
+          height: 24vh;
+          width: 92%;
+          left: 4%;
+          position: relative;
+        }
+      }
+      //拣选物料详情
+      .picker-material-detail {
+        width: 67vw;
+        height: 43vh;
+        background-image: url('../images/loadPickerMaterialDetail.png');
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 55%;
+        .picker-material-detail-text {
+          height: 8vh;
+          position: relative;
+          font-size: 1.4vw;
+          color: #76f0ee;
+          top: 7%;
+          left: 42%;
+        }
+        .picker-material-detail-table {
+          height: 24vh;
+          width: 92%;
+          left: 4%;
+          position: relative;
+        }
+      }
+    }
+  }
+
+  .middle-main {
+    height: 1vh;
+  }
+
+  .bottom-main {
+    //height: 50vh;
+    //左下侧托盘操作
+    .stock-main {
+      //width: 30vw;
+      .stock-main-picker {
+        background-image: url('../images/loadPickerPosition.png');
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 11%;
+        right: 1%;
+        width: 29vw;
+        height: 20vh;
+        .picker-work-stock {
+          width: 30vw;
+        }
+      }
+      .stock-main-install-position {
+        background-image: url('../images/loadPickerPosition.png');
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 33%;
+        right: 1%;
+        width: 29vw;
+        height: 20vh;
+        .install-position-stock {
+          width: 30vw;
+        }
+      }
+    }
+    //右下侧装卸任务
+    .load-task-operate {
+      background-image: url('../images/loadTaskOperate.png');
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 55%;
+      right: 1%;
+      height: 43vh;
+      width: 29vw;
+      //标题
+      .load-task-operate-text-main {
+        height: 10vh;
+        position: relative;
+        .load-task-operate-text {
+          transform: translate(-50%, -50%);
+          position: absolute;
+          top: 50%;
+          left: 52%;
+          font-size: 1.2vw;
+          color: #76f0ee;
+        }
+      }
+      //输入框
+      .load-task-operate-input-main {
+        //height: 24vh;
+        //position: relative;
+        .load-task-operate-input {
+          top: 17%;
+          left: 10%;
+          //transform: translate(-50%, -50%);
+          position: absolute;
+          .form-style {
+            .el-form-item {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+      //按钮
+      .load-task-operate-btn-main {
+        /*         height: 16vh;
+         //width: 66vw;
+         position: relative;*/
+
+        .start-work-btn-bg {
+          position: absolute;
+          width: 7vw;
+          left: 9%;
+          top: 82%;
+        }
+        .start-work-btn-bg:hover {
+          box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
+          opacity: 0.8;
+          cursor: pointer;
+        }
+        .end-work-btn-bg {
+          width: 7vw;
+          position: absolute;
+          left: 9%;
+          top: 82%;
+        }
+        .end-work-btn-bg:hover {
+          box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
+          opacity: 0.8;
+          cursor: pointer;
+        }
+        .check-file-btn-bg {
+          width: 7vw;
+          position: absolute;
+          left: 63%;
+          top: 82%;
+        }
+        .check-file-btn-bg:hover {
+          box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+    }
+
+    //区域信息
+    .area {
+      z-index: 1;
+      height: 6vh;
+      overflow: hidden;
+      position: relative;
+      color: #76f0ee;
+      //margin-left: 100px;
+
+      .areafont {
+        //font-size: 22px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        //left:30%;
+        overflow: hidden;
+        color: #76f0ee;
+        //margin-left: 100px;
+        //font-size: 1.3vw;
+        font-size: 1vw;
+      }
+    }
+
+    //托盘信息
+    .stock {
+      position: relative;
+      z-index: 1;
+      height: 16vh;
+
+      .stockmain {
+        //width: 16vw;
+        overflow: hidden;
+      }
+      .stockInfo {
+        height: 10vh;
+        .stockitem {
+          width: 100%;
+          position: absolute;
+          top: 20%;
+          left: 83%;
+          transform: translate(-50%, -50%);
+          color: white;
+          font-size: 0.9vw;
+        }
+        .stockitemnone {
+          top: 20%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          position: absolute;
+          color: #d3fffd;
+          font-size: 2vw;
+        }
+      }
+      .stockbtn {
+        //height: 8vh;
+        //托盘信息下的图片按钮
+        .stockimg {
+          top: 30%;
+          position: relative;
+          //呼叫agv
+          .callAgv {
+            //display: block;
+            transform: scale(1.1);
+            transform-origin: 0% 0%;
+            width: 6vw;
+          }
+          .callAgv:hover {
+            box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
+            opacity: 0.8;
+            cursor: pointer;
+          }
+          //托盘入库
+          .warehouse {
+            width: 6vw;
+            //left: 60%;
+            //left: 36%;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          .warehouse:hover {
+            box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
+            opacity: 0.8;
+            cursor: pointer;
+          }
+          //选择托盘
+          .chooseStock {
+            width: 6vw;
+            //left: 36%;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+          }
+          .chooseStock:hover {
+            box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
+            opacity: 0.8;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  //输入框样式调整
+  .my-input {
+    font-size: 1.2vw;
+    .el-input__wrapper {
+      background-color: transparent;
+      border: 2px solid #01e0fc;
+    }
+
+    .el-input__inner {
+      //color: #76f0ee;
+      color: white;
+      //font-size: large;
+    }
+    /*.el-input__wraper{*/
+    /*background-color: transparent;*/
+    /*}*/
+    .el-form-item__label {
+      //font-size: 20px;
+      //color: #76f0ee;
+      margin-bottom: 0;
+      color: white;
+    }
+    //输入框的样式
+    .my-input-item {
+      /*
+       max-width: 200px;
+       max-height:40px;
+       */
+      height: 3vh;
+      border: none !important;
+      box-shadow: none !important;
+      .el-input__inner {
+        border: none !important; /* 使用 !important 来确保覆盖默认样式 */
+        box-shadow: none !important;
+      }
+    }
+  }
+
+  .my-dialog {
+    .chooseStockTable {
+    }
+    .my-dialog-main {
+      height: 400px;
+    }
+  }
+  //弹窗里的关闭按钮
+  .closeContainer {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    left: 95%;
+    position: relative;
+  }
+  .closeContainer:hover {
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  //弹窗里的确认按钮
+  .confirmContainer {
+    width: 224px;
+    height: 83px;
+    //background-color: red;
+    position: relative;
+    left: 42%;
+    .confirmContect {
+      transform: scale(0.3);
+      transform-origin: 0% 0%;
+      position: relative;
+      left: 65%;
+      top: 30%;
+    }
+    .confirmContect:hover {
+      box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+
+  //弹窗-空托盘-详情文字
+  .emptyStockText {
+    margin-top: 8px;
+    font-size: 1.1em;
+    color: #76f0ee;
+  }
+
+  //弹窗-空托盘-详情数据
+  .emptyStockDetail {
+    height: 300px;
+    position: relative;
+    //弹窗-空托盘-详情图片
+    .emptyStockDetailPng {
+      position: absolute;
+    }
+    //弹窗-空托盘-详情表格
+    .emptyStockDetailTable {
+      width: 96%;
+      top: 20%;
+      position: relative;
+    }
+  }
+
+  //弹窗样式
+  //.el-dialog{
+  //  background-color: transparent;
+  //  background-image: url("../images/dialog.png");
+  //  background-size: 100% 100%;
+  //  background-position: center;
+  //  background-repeat: no-repeat;
+  //
+  //}
+  //.el-dialog__header{
+  //  padding: 0;
+  //}
+  //.el-dialog__body,el-dialog__header{
+  //  padding: 0;
+  //}
+
+  /** 布局配置 */
+  .el-main {
+    padding: 0;
+    overflow: hidden;
+  }
+  .el-header {
+    padding: 0;
+  }
+  .el-footer {
+    padding: 0;
+  }
+  .el-container {
+    overflow: hidden;
+  }
+
+  //.el-table{
+  //  //表格背景透明
+  //  --el-table-border-color: transparent;
+  //  --el-table-border: none;
+  //  //--el-table-current-row-bg-color: transparent;
+  //  --el-table-header-bg-color: transparent;
+  //  --el-table-bg-color: transparent;
+  //  --el-table-tr-bg-color: transparent;
+  //  --el-table-expanded-cell-bg-color: transparent;
+  //
+  //  //表头颜色
+  //  --el-table-header-text-color: #76f0ee;
+  //  //文字颜色
+  //  --el-table-text-color: #76f0ee;
+  //  //鼠标停留在当前行高亮
+  //  --el-table-row-hover-bg-color: rgb(118,240,238,0.4);
+  //  //选中高亮
+  //  --el-table-current-row-bg-color: rgb(118,240,238,0.4);
+  //}
+}

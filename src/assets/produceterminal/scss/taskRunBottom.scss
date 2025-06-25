@@ -1,0 +1,75 @@
+
+.process-container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .swiper-button-prev {
+        background-image: url(@/assets/produceterminal/images/step-left.png) !important;
+        background-size: 100% 100%;
+        position: absolute;
+        top: 10vh;
+        left: 0.5vw;
+        width: 20px;
+        height: 50px;
+        z-index: 1;
+    }
+
+    .swiper-button-prev:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+    .swiper-button-next {
+        background-image: url(@/assets/produceterminal/images/step-right.png) !important;
+        background-size: 100% 100%;
+        position: absolute;
+        top: 10vh;
+        right: 0.2vw;
+        width: 20px;
+        height: 50px;
+        z-index: 1;
+    }
+
+    .swiper-button-next:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+    .step-main {
+        background-image: url("@/assets/produceterminal/images/step-card.png");
+        background-size: 100% 100%;
+        //width: 30%;
+        //top: 80vh;
+        //height: 20vh;
+        .el-header {
+            height:5vh !important;
+
+        }
+        .step-header {
+            width: 100%;
+            .step-title{
+                top:1.5vh;
+                left: 1.5vw;
+                position: absolute;
+                width: 100%;
+                .text {
+                    font-size: 0.8vw;
+                    color: #76f0ee;
+                }
+            }
+        }
+
+        .step-detail-text {
+            font-size: 0.6vw;
+            color: #00DBE4;
+            font-weight: bold;
+        }
+    }
+}
+
+.process-step-swiper {
+    width: 90%
+}

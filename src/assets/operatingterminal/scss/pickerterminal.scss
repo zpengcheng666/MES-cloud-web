@@ -1,0 +1,419 @@
+#my-containner {
+  height:100vh;
+  background-image: url("../images/pickerterminalBG.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  //id扫码
+  .sacnCode{
+    height: 6vh;
+    left:88%;
+    top:27%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    .scanID{
+      width: 3vw;
+      //transform: scale(0.25);
+      //transform-origin:0% 0%;
+      position: absolute;
+    }
+    .scanID:hover{
+      box-shadow: -1px 1px 1px rgba(0,0,0,.5);
+      opacity: 0.8;
+      cursor: pointer;
+    }
+    .scanText{
+      left:3.6%;
+      top:15%;
+      font-size: 1.5vw;
+      color: #76f0ee;
+      position: absolute;
+    }
+  }
+
+  //上部主要区域
+  .top-main{
+    height: 35vh;
+    //左上侧 拣选工作
+    .picker-work{
+      width: 47.5vw;
+      height: 35vh;
+      position: relative;
+      background-image: url("../images/pickerWorkBox.png");
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      .picker-work-text{
+        width: 47.5vw;
+        height: 5vh;
+        font-size:1.5vw;
+        color: #76f0ee;
+        top: 5%;
+        left: 42%;
+        position: relative
+      }
+      .picker-work-table{
+        width: 96%;
+        position: relative;
+        top:5%;
+        left:2%;
+      }
+    }
+    .picker-placeholder{
+      width: 1vw;
+      height: 35vh
+    }
+    //右上侧 拣选物料详情
+    .picker-material-detail{
+      width: 47.5vw;
+      height: 35vh;
+      position: relative;
+      background-image: url("../images/pickerWorkBox.png");
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      .picker-material-detail-text{
+        width: 47.5vw;
+        height: 5vh;
+        font-size:1.5vw;
+        color: #76f0ee;
+        top: 5%;
+        left: 42%;
+        position: relative
+      }
+      .picker-material-detail-table{
+        width: 96%;
+        position: relative;
+        top:5%;
+        left:2%;
+      }
+    }
+  }
+
+  //中部占位区
+  .middle-main{
+    height: 3vh;
+  }
+
+  //下部主要区域
+  .bottom-main{
+    height: 49vh;
+    //拣选工作-托盘
+    .picker-work-stock{
+      width: 38vw;
+      height: 24vh;
+      background-image: url("../images/pickerOperateBox.png");
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    //操作区-托盘
+    .oprate-area-stock{
+      width: 38vw;
+      height: 24vh;
+      background-image: url("../images/pickerOperateBox.png");
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    //拣选工作-托盘-右侧
+    .picker-material-main{
+      width: 57vw;
+      background-image: url("../images/pickerInfoDetailBox.png");
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      //拣选工作-右侧的表格
+      .picker-material-table{
+        position:relative;
+        width: 80%;
+        left:10%;
+      }
+      //图片按钮
+      .picker-material-btn{
+        height:6vh;
+        position: relative;
+        .warehouseOut{
+          left:80%;
+          width: 6vw;
+          position: absolute;
+        }
+        .warehouseOut:hover{
+          box-shadow: -1px 1px 1px rgba(0,0,0,.5);
+          opacity: 0.8;
+          cursor: pointer;
+        }
+        .warehouseIn{
+          left:65%;
+          top:1%;
+          width: 6vw;
+          position: absolute;
+        }
+        .warehouseIn:hover{
+          box-shadow: -1px 1px 1px rgba(0,0,0,.5);
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+    }
+    //操作区-托盘-右侧
+    .operate-material-main{
+      width: 57vw;
+      background-image: url("../images/pickerInfoDetailBox.png");
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      .operate-table-text{
+        position: relative;
+        left:48%;
+        color: #76f0ee;
+        font-size: 1vw;
+      }
+      .operate-material-table{
+        position:relative;
+        width: 80%;
+        left:10%;
+      }
+      .operate-material-btn{
+        height:6vh;
+        position: relative;
+        .warehouseOut{
+          left:80%;
+          width: 6vw;
+          position: absolute;
+        }
+        .warehouseOut:hover{
+          box-shadow: -1px 1px 1px rgba(0,0,0,.5);
+          opacity: 0.8;
+          cursor: pointer;
+        }
+        .warehouseIn{
+          left:65%;
+          top:1%;
+          width: 6vw;
+          position: absolute;
+        }
+        .warehouseIn:hover{
+          box-shadow: -1px 1px 1px rgba(0,0,0,.5);
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+    }
+
+
+
+
+
+
+    //区域信息
+    .area{
+      z-index: 1;
+      height: 4vh;
+      overflow: hidden;
+      position: relative;
+      color: #76f0ee;
+      //margin-left: 100px;
+
+      .areafont{
+        //font-size: 22px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        //left:30%;
+        overflow: hidden;
+        color: #76f0ee;
+        //margin-left: 100px;
+        //font-size: 1.3vw;
+        font-size: 1.3vw;
+      }
+    }
+
+    //托盘信息
+    .stock{
+      position: relative;
+      z-index: 1;
+      height: 20vh;
+
+      .stockmain{
+        //width: 16vw;
+        overflow: hidden;
+      }
+      .stockInfo{
+        height: 12vh;
+        .stockitem{
+          position: absolute;
+          top: 30%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: #d3fffd;
+          font-size: 1.2vw;
+        }
+        .stockitemnone{
+          top: 30%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          position: absolute;
+          color: #d3fffd;
+          font-size: 3vw;
+        }
+
+      }
+      .stockbtn{
+        height: 8vh;
+        //托盘信息下的图片按钮
+        .stockimg{
+          top: 40%;
+          position: relative;
+          //呼叫agv
+          .callAgv{
+            //display: block;
+            transform: scale(1.1);
+            transform-origin:0% 0%;
+            width: 6vw;
+          }
+          .callAgv:hover{
+            box-shadow: -1px 1px 1px rgba(0,0,0,.5);
+            opacity: 0.8;
+            cursor: pointer;
+          }
+          //托盘入库
+          .warehouse{
+            width: 6vw;
+            //left: 60%;
+            //left: 36%;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          .warehouse:hover{
+            box-shadow: -1px 1px 1px rgba(0,0,0,.5);
+            opacity: 0.8;
+            cursor: pointer;
+          }
+          //选择托盘
+          .chooseStock{
+            width: 6vw;
+            //left: 36%;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+          }
+          .chooseStock:hover{
+            box-shadow: -1px 1px 1px rgba(0,0,0,.5);
+            opacity: 0.8;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .bottom-main-middle-placeholder{
+      width: 1vw;
+      height: 24vh;
+    }
+    .bottom-container-middle-placeholder{
+      height: 1vh;
+    }
+
+  }
+
+  .footer{
+    height: 3vh;
+  }
+
+  .my-dialog{
+    //弹窗里的关闭按钮
+    .closeContainer{
+      width: 30px;
+      height:30px;
+      margin-top: 10px;
+      left:95%;
+      position: relative;
+    }
+    .closeContainer:hover{
+      box-shadow: -1px 1px 1px rgba(0,0,0,.5);
+      opacity: 0.8;
+      cursor: pointer;
+    }
+
+    //弹窗里的确认按钮
+    .confirmContainer{
+      width: 224px;
+      height:83px;
+      //background-color: red;
+      position: relative;
+      left:42%;
+      .confirmContect{
+        transform: scale(0.3);
+        transform-origin:0% 0%;
+        position: relative;
+        left:65%;
+        top:30%;
+      }
+      .confirmContect:hover{
+        box-shadow: -1px 1px 1px rgba(0,0,0,.5);
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    }
+
+    //弹窗-空托盘-详情文字
+    .emptyStockText{
+      margin-top: 8px;
+      font-size: 1.1em;
+      color: #76f0ee;
+    }
+
+    //弹窗-空托盘-详情数据
+    .emptyStockDetail{
+      height: 300px;
+      position: relative;
+      //弹窗-空托盘-详情图片
+      .emptyStockDetailPng{
+        position: absolute;
+      }
+      //弹窗-空托盘-详情表格
+      .emptyStockDetailTable{
+        width: 96%;
+        top:20%;
+        position: relative;
+      }
+    }
+  }
+
+
+
+  .aside1,aside2{
+    height: 35vh;
+  }
+  .aside3,aside4{
+    height: 48vh;
+  }
+
+  /** 布局配置 */
+  .el-main{
+    padding: 0;
+    overflow: hidden;
+  }
+  .el-header{
+    padding: 0;
+  }
+  .el-footer{
+    padding: 0;
+  }
+  .el-container{
+    overflow: hidden;
+  }
+
+
+}

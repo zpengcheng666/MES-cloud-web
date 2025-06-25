@@ -1,0 +1,30 @@
+//根节点
+.root {
+  width: 100%;
+  height: 95%;
+  margin-top: 2vh;
+
+  .left {
+    background-image: url(../images//taskRunLeftBackground.png);
+    background-size: 100% 100%;
+    margin-left: auto;
+  }
+  .main {
+    .main-body {
+      height: 100%;
+      .main-top {
+        background-image: url(../images/taskRunMainTopBackground.png);
+        background-size: 100% 100%;
+        padding: 0px;
+      }
+
+      .main-bottom {
+      }
+    }
+  }
+  .right {
+    background-image: url(../images/taskRunRightBackground.png);
+    background-size: 100% 100%;
+    margin-right: auto;
+  }
+}

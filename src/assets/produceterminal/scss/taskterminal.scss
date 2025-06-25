@@ -1,0 +1,74 @@
+.myContainner {
+  height: 100vh;
+  background-image: url('../images/background.png');
+  background-size: 100% 100%;
+  //设置背景
+
+  //底部窗口
+  .bottom-row {
+    background-image: url(../images/navigationBottom.png);
+    background-size: 100% 100%;
+
+    width: 70vw;
+    height: 10vh;
+    margin: 1vh auto !important;
+
+    .button_1,
+    .button_2,
+    .button_3,
+    .button_4,
+    .button_5 {
+      opacity: 0.5;
+      height: 10vh;
+    }
+    .button_1:hover,
+    .button_2:hover,
+    .button_3:hover,
+    .button_4:hover,
+    .button_5:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+
+  //顶部内容
+  .head {
+    padding: 0px !important;
+
+    //顶部显示
+    .header-row {
+      width: 100%;
+      height: 100%;
+      margin: 0px !important;
+      color: rgba(97, 250, 249, 255);
+
+      .col {
+        height: 100%;
+        font-size: 2.2vh;
+
+        .left{
+          margin: 3vh 0px 0px 5vw;
+        }
+        .right{
+          margin: 3vh 0px 0px 15vw;
+        }
+
+        .image{
+          height: 4vh;
+        }
+      }
+
+      .str {
+        padding-top: 1vh;
+        font-size: 3vh;
+        text-align: center;
+      }
+    }
+  }
+
+  //内容部分
+  .main{
+    margin: 1vh 0px 0px 0px;
+    padding: 0px !important;
+  }
+}

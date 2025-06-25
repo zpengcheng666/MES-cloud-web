@@ -1,0 +1,77 @@
+.task-container {
+  height: 100%;
+  //padding: 4vh 5vw ;
+  background-size: 100% 100%;
+  margin-right: 1vw;
+  width: 98%;
+  position: relative;
+  .task-header {
+    width: 100%;
+    .scanText {
+      top: 3vh;
+      font-size: 1.2vw;
+      color: #76f0ee;
+      position: absolute;
+    }
+  }
+
+  .input {
+    width: 80%;
+    left: 8%;
+    margin-bottom: 1.5vh;
+    background-image: url(../images/problemReportingInput.png);
+    background-size: 100% 100%;
+    --el-input-text-color: white;
+  }
+  .input :deep(*) {
+    background-color: transparent;
+    border: 0px solid white;
+    box-shadow: 0px 0px 0px 0px white;
+  }
+
+  .task-table {
+    //border-top: 0.3vh solid rgba(37,249,254,1);
+    background-color: transparent;
+    width: 80%;
+    left: 8%;
+    font-size: small;
+    --el-table-text-color: white;
+    --el-table-header-text-color: white;
+    --el-table-border-color: rgba(37, 249, 254, 1);
+    --el-table-row-hover-bg-color: rgb(118, 240, 238, 0.4);
+    --el-table-current-row-bg-color: rgb(118, 240, 238, 0.4);
+
+    .expandBtn {
+      background-image: url(../images/expandBtn.png);
+      background-size: 100% 100%;
+      width: 0.7vw;
+      height: 1.5vh;
+      margin-left: 1vw;
+    }
+
+    .expandBtn:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    .task-detail-table {
+      background-color: transparent;
+      width: 80%;
+      left: 8%;
+      font-size: small;
+      --el-table-text-color: white;
+      --el-table-header-text-color: white;
+      --el-table-border-color: rgba(37, 249, 254, 1);
+      --el-table-row-hover-bg-color: rgb(118, 240, 238, 0.4);
+      --el-table-current-row-bg-color: rgb(118, 240, 238, 0.4);
+    }
+
+    .task-detail-table :deep(*) {
+      background-color: transparent;
+    }
+  }
+
+  .task-table :deep(*) {
+    background-color: transparent;
+  }
+}

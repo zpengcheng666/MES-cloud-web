@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cimp-web-nginx-conf
+  namespace: miyu
+  labels:
+    app: nginx-conf
+data:
+  nginx.conf: |
+    server {
+        listen  80;
+        server_name jeecg-vue;
+        root /usr/share/nginx/html/;
+       location / {
+                # 用于配合 browserHistory使用
+       		 try_files $uri $uri/ /index.html;
+          }
+        error_page 500 502 503 504 /50x.html;
+
+        location = /50x.html {
+            root    html;
+        }
+    }

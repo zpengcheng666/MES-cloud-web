@@ -1,0 +1,87 @@
+//根节点
+.root {
+  padding: 1.1vh 1vw 0vh 0.7vw;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+
+  .body {
+    width: 100%;
+    height: 100%;
+
+    .head {
+      padding-top: 4vh;
+      color: rgba(164, 246, 247, 1);
+      text-align: center;
+      font-size: 2.5vh;
+    }
+
+    .main {
+      width: calc(100% - 0.5vw);
+      height: calc(100% - 4vh - 4vh - 3vh - 1vh);
+      padding-left: 0.5vw;
+      padding-top: 3vh;
+
+      .block-all {
+        width: 80%;
+        margin: 0px auto 15px auto;
+
+        .block {
+          height: 50px;
+          width: 100%;
+
+          .row {
+            height: 100%;
+            width: 100%;
+            margin: 0px 1vw;
+
+            .text {
+              color: rgba(171, 246, 247, 1);
+              font-size: 1.5vh;
+            }
+          }
+        }
+
+        .block:hover {
+          cursor: pointer;
+        }
+
+        .block-list {
+          width: 99.4%;
+          height: 50px;
+          border: 1px solid rgba(69, 108, 122, 1);
+          box-shadow: 0px 0px 8px rgba(69, 108, 122, 1) inset;
+
+          .text {
+            text-align: center;
+            font-size: 1.5vh;
+            width: 100%;
+            color: rgba(116, 172, 181, 1);
+            margin-top: 1.5vh;
+
+            .el-switch {
+              --el-switch-on-color: #09406d !important;
+              --el-switch-off-color: #09406d !important;
+            }
+
+            --el-color-white: #51acb4;
+          }
+        }
+
+        .block-list:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.resourceBlock {
+  background-image: url(../images/resourceBlock.png);
+  background-size: 100% 100%;
+}
+
+.resourceBlockActivity {
+  background-image: url(../images/resourceBlockActivity.png);
+  background-size: 100% 100%;
+}

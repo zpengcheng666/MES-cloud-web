@@ -1,0 +1,124 @@
+<template>
+    <Dialog :title="dialogTitle" v-model="dialogVisible">
+        <el-form ref="formRef" :model="formData" :rules="formRules" label-width="100px" v-loading="formLoading">
+            <el-form-item label="产品图号" prop="rootproductId">
+                <el-select v-model="formData.rootproductId" clearable disabled>
+                    <el-option v-for="product in productList" :key="product.id" :label="product.productNumber"
+                        :value="product.id" />
+                </el-select>
+            </el-form-item>
+            <el-form-item label="客户化标识" prop="customizedIndex">
+                <el-input v-model="formData.customizedIndex" prop="customizedIndex" />
+            </el-form-item>
+            <el-table :data="list">
+                <el-table-column prop="stdDataObject" label="标准数据对象" />
+                <el-table-column prop="customizedDataObject" label="客户化数据对象">
+                    <template #default="scope">
+                        <span v-if="formData.customizedIndex">{{ formData.customizedIndex }} _ </span>
+                        {{ scope.row.customizedDataObject }}
+                    </template>
+                </el-table-column>
+            </el-table>
+        </el-form>
+        <template #footer>
+            <el-button @click="submitForm" type="primary" :disabled="formLoading">确 定</el-button>
+            <el-button @click="dialogVisible = false">取 消</el-button>
+        </template>
+    </Dialog>
+</template>
+<script setup lang="ts">
+import { DataObjectApi, DataObjectVO } from '@/api/pdm/dataObject'
+import * as ProductApi from '@/api/pdm/product';
+/** 产品数据对象 表单 */
+defineOptions({ name: 'UpdateDataObjectForm' })
+
+const { t } = useI18n() // 国际化
+const message = useMessage() // 消息弹窗
+const productList = ref<any[]>([]) // 产品列表
+
+const list = ref([
+    { stdDataObject: 'PartMaster', customizedDataObject: 'part_master' },
+    { stdDataObject: 'PartVersion', customizedDataObject: 'part_version' },
+    { stdDataObject: 'DocumentMaster', customizedDataObject: 'document_master' },
+    { stdDataObject: 'DocumentVersion', customizedDataObject: 'document_version' },
+    { stdDataObject: 'DocumentRevision', customizedDataObject: 'document_revision' },
+    { stdDataObject: 'DocumentFile', customizedDataObject: 'document_file' },
+])
+//const list = ref<DataObjectVO[]>([]) // 列表的数据
+const dialogVisible = ref(false) // 弹窗的是否展示
+const dialogTitle = ref('') // 弹窗的标题
+const formLoading = ref(false) // 表单的加载中：1）修改时的数据加载；2）提交的按钮禁用
+const formType = ref('') // 表单的类型：create - 新增；update - 修改
+const formData = ref({
+    id: undefined,
+    rootproductId: undefined,
+    stdDataObject: undefined,
+    customizedDataObject: undefined,
+    customizedIndex: undefined,
+    customizedType: undefined,
+    tableName: undefined,
+    description: undefined,
+    status: undefined,
+    intrinsicAttrs: undefined,
+    customizedAttrs: undefined,
+    serialNumber: undefined,
+    list: undefined,
+    customizedIndexOld: undefined,
+})
+const formRules = reactive({
+  customizedIndex: [{ required: true, message: '客户化标识不能为空', trigger: 'blur' },
+    { validator: (rule, value, callback) => {
+        const regex = /[^a-z]/g;
+        if (regex.test(value)) {
+          callback(new Error('客户化标识必须是小写字母'));
+        } else {
+          callback()
+        }
+      },trigger: 'change',}],
+})
+const formRef = ref() // 表单 Ref
+
+const productParams = reactive({
+  status: 0,
+  productType: 0
+})
+
+/** 打开弹窗 */
+const open = async (type: string, id?: number, rootproductId: string, customizedIndex: string) => {
+    productList.value = await ProductApi.getProductList(productParams)
+    formData.value.rootproductId = rootproductId
+    formData.value.customizedIndex = customizedIndex
+    formData.value.customizedIndexOld = customizedIndex
+
+    dialogVisible.value = true
+    dialogTitle.value = t('action.' + type)
+    formType.value = type
+
+}
+defineExpose({ open }) // 提供 open 方法，用于打开弹窗
+
+/** 提交表单 */
+const emit = defineEmits(['success']) // 定义 success 事件，用于操作成功后的回调
+const submitForm = async () => {
+    // 校验表单
+    await formRef.value.validate()
+    // 提交请求
+    formLoading.value = true
+    try {
+        const data = formData.value as unknown as DataObjectVO
+        data.list = list.value
+        // if (formType.value === 'create') {
+        //     await DataObjectApi.createDataObject(data)
+        //     message.success(t('common.createSuccess'))
+        // } else {
+            await DataObjectApi.updateDataObject(data)
+            message.success(t('common.updateSuccess'))
+       // }
+        dialogVisible.value = false
+        // 发送操作成功的事件
+        emit('success')
+    } finally {
+        formLoading.value = false
+    }
+}
+</script>
